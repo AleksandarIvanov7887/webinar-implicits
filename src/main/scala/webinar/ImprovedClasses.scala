@@ -42,16 +42,13 @@ object ImprovedClasses {
     // no need for new, because of apply
     val secondPerson = Person("Newborn Baby")
     // called toString
-    println(secondPerson)
+    println("Improved print: " + secondPerson)
 
     // called equals
-    println("Are the two people equals")
-    println(Person("Aleksandar") == Person("Aleksandar"))
+    println("Are the two people equal: " + (Person("Aleksandar") == Person("Aleksandar")))
 
-    println("Safe creation")
-    println(Person.of("R2D2"))
+    println("Safe creation: " + Person.of("R2D2"))
 
-    println("Unsafe creation")
-    println(Person.unsafeOf("R2D2"))
+    println("Unsafe creation: " + Person.unsafeOf("R2D2"))
   }
 }

@@ -14,6 +14,8 @@ object ImplicitConversion extends App {
 
   greetMamal(Person("Иван", 7))
 
+  // ----------------------------------------
+
   trait Adult {
     val canVote: Boolean
   }
@@ -24,8 +26,8 @@ object ImplicitConversion extends App {
 
   val kid     = Person("Kid", 6)
   val grandpa = Person("GrandParent", 65)
-  println(kid.canVote)
-  println(grandpa.canVote)
+  println("Can kid vote? " + kid.canVote)
+  println("Can grandpa vote? " + grandpa.canVote)
 
   // All kinds of syntax extensions
 }

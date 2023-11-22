@@ -8,13 +8,14 @@ object MultipleParamList extends App {
   def foldV2[A, B](x: A, y: A)(combinator: Combinator[A, B]): B =
     combinator.combine(x, y)
 
-  println(foldV2(10, 5)(Combinator.intAddition))
+  println("Addition: " + foldV2(10, 5)(Combinator.intAddition))
+  println("Division: " + foldV2(10, 5)(Combinator.intDivision))
 
   // Partial application
   def partiallyApplied[B]: Combinator[Int, B] => B = foldV2(10, 5)
 
-  println(partiallyApplied(Combinator.intAddition))
-  println(partiallyApplied(Combinator.intDivision))
+  println("Partially applied: " + partiallyApplied(Combinator.intAddition))
+  println("Partially applied: " + partiallyApplied(Combinator.intDivision))
 
   // Type inference
   foldV2(1, 2) { case (x, y) => x + y }

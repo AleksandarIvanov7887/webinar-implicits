@@ -1,9 +1,14 @@
 package webinar
 
 object ContextualParams extends App {
+  def foldV4[A, B](x: A, y: A)(implicit combinator: Combinator[A, B]): B = combinator.combine(x, y)
+
+//  println("With imlpicit: " + foldV4(10, 5))
+
+
   private val listOfNumbers = List(1, 42, 52, 14, 52, 37)
 
-  println(listOfNumbers.max)
+  println("Largest number: " + listOfNumbers.max)
 
   val people: List[Person] = List(
     Person("Ivan", 21),
@@ -28,12 +33,10 @@ object ContextualParams extends App {
 //  implicit val personOrder =
 //    Ordering.by[Person, Int](_.age)
 //      .orElse(Ordering.by[Person, String](_.name).reverse)
-//  println(people.max)
+//  println("With implicit max: " + people.max)
 
-//  println(people.sorted)
+//  println("With implicit sorted: " + people.sorted)
 
-
-//  def foldV4[A, B](x: A, y: A)(implicit combinator: Combinator[A, B]): B = combinator.combine(x, y)
 
 //  implicit val personCombinator = new Combinator[Person, Family] {
 //    override def combine(x: Person, y: Person): Family = Family(x, y)

@@ -16,22 +16,18 @@ object Classes {
     val thirdPerson = new Person(age = 12, name = "Different Name")
 
     // Access fields of the class
-    println("First Person's name:")
-    println(aPerson.name)
+    println("First Person's name: " + aPerson.name)
 
     aPerson.age = 32
-    println("Second Person's age:")
-    println(aPerson.age)
+    println("Second Person's age: " + aPerson.age)
 
     // Private field
 //    println(aPerson.ssn)
 
     // Printing the pointer
-    println("Print first person:")
-    println(aPerson)
+    println("Print first person: " + aPerson)
 
     // Equality by pointer
-    println("Are first two people equal:")
-    println(aPerson == secondPerson)
+    println("Are first two people equal: " + (aPerson == secondPerson))
   }
 }

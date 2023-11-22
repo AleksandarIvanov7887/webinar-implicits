@@ -20,15 +20,14 @@ object Basics {
 
   // main executable method
   def main(args: Array[String]): Unit = {
-    println("Values:")
-    println(anIntegerValue)
-    println(aStringValue)
+    println("Basics")
 
-    println("Variables:")
-    println(anIntegerVariable)
-    println(aStringVariable)
+    println("Int Values: " + anIntegerValue)
+    println("String Values: " + aStringValue)
 
-    println("Result from method call:")
-    println(calculateSumMethod(anIntegerValue, anIntegerVariable))
+    println("Variables: " + anIntegerVariable)
+    println("Variables: " + aStringVariable)
+
+    println("Result from method call: " + calculateSumMethod(anIntegerValue, anIntegerVariable))
   }
 }
